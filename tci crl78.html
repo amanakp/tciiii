@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TEXTILE COLOURS INDIA - Textile Dyes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and box-sizing */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fafb;
+    color: #1a202c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    user-select: none;
+  }
+  header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  header .logo img {
+    height: 36px;
+    width: auto;
+  }
+  main {
+    flex: 1;
+    padding: 48px 24px 64px;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    color: #003366;
+  }
+  h2 { /* Added for the new CRL heading */
+    font-weight: 700;
+    font-size: 1.75rem; /* Slightly smaller than h1 */
+    text-align: center;
+    color: #003366;
+    margin-bottom: 24px;
+  }
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  @media (min-width: 640px) {
+    .buttons-container {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+  button {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 6px;
+    border: 2px solid #00509e;
+    background-color: white;
+    color: #00509e;
+    box-shadow: 0 2px 6px rgb(0 80 158 / 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+  }
+  button:hover,
+  button:focus-visible {
+    background-color: #00509e;
+    color: white;
+    outline: none;
+    box-shadow: 0 4px 12px rgb(0 80 158 / 0.4);
+  }
+  button:active {
+    background-color: #003d66;
+    box-shadow: 0 2px 6px rgb(0 62 102 / 0.6);
+    transform: scale(0.97);
+  }
+  button.active { /* Style for active button */
+    background-color: #00509e;
+    color: white;
+  }
+
+  .color-sequence-box {
+    border: 2px solid #00509e;
+    border-radius: 12px;
+    background-color: white;
+    padding: 24px 32px;
+    box-shadow: 0 6px 18px rgb(0 80 158 / 0.2);
+    max-width: 480px;
+    margin: 0 auto;
+    color: #003366;
+  }
+  .color-sequence-box h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .color-list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  .color-list th {
+    background-color: #00509e;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+  .color-list td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+  }
+  .color-list tr:nth-child(even) {
+    background-color: #f7fafc;
+  }
+
+  /* Added styles for about, services, contact sections for consistency */
+  .about, .services, .contact {
+      border: 2px solid #e2e8f0; /* Lighter border */
+      border-radius: 12px;
+      background-color: white;
+      padding: 24px 32px;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.05); /* Softer shadow */
+  }
+  .about h2, .services h2, .contact h2 {
+      color: #003366;
+      font-size: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+  .services ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  .services ul li {
+      background-color: #e6f0fa; /* Light blue background for list items */
+      margin-bottom: 8px;
+      padding: 10px 15px;
+      border-radius: 4px;
+      color: #00509e;
+      font-weight: 500;
+  }
+  .contact p {
+      margin-bottom: 10px;
+  }
+  .contact a {
+      color: #00509e;
+      text-decoration: none;
+  }
+  .contact a:hover {
+      text-decoration: underline;
+  }
+
+  footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.875rem;
+  }
+</style>
+</head>
+<body>
+  <header role="banner">
+    <div class="logo" aria-label="TEXTILE COLOURS INDIA">
+      <img src="https://placehold.co/36x36?text=TCI&font=roboto" alt="Textile Colours India Logo" />
+      Textile Colours India - Dyes for Dyeing...
+    </div>
+  </header>
+
+  <main role="main" aria-labelledby="main-categories-title">
+    <h1 id="main-categories-title">CATEGORIES</h1>
+    <h2 id="crl-heading">CRL</h2> <div class="buttons-container" role="group" aria-label="Textile Dye Categories Buttons">
+      <button type="button" aria-label="Direct Dyes" data-dye="direct">Direct Dyes</button>
+      <button type="button" aria-label="Reactive Dyes" data-dye="reactive">Reactive Dyes</button>
+      <button type="button" aria-label="Sulphur Dyes" data-dye="sulphur">Sulphur Dyes</button>
+      <button type="button" aria-label="Auxiliaries" data-dye="auxiliaries">Auxiliaries</button>
+    </div>
+
+    <section id="color-sequence" aria-live="polite" aria-atomic="true"></section>
+
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Us</h2>
+      <p>Textile Colours India is a leading provider of high-quality textile dyes. Our commitment to excellence and innovation ensures that we meet the diverse needs of our clients in the textile industry.</p>
+    </section>
+
+    <section class="services" aria-labelledby="services-title">
+      <h2 id="services-title">Our Services</h2>
+      <ul>
+        <li>Custom Dye Solutions</li>
+        <li>Technical Support and Consultation</li>
+        <li>Quality Assurance and Testing</li>
+        <li>Fast and Reliable Delivery</li>
+      </ul>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Us</h2>
+      <p>If you have any questions or need assistance, feel free to reach out to us:</p>
+      <p>Email: <a href="mailto:info@textilecoloursindia.com">info@textilecoloursindia.com</a></p>
+      <p>Phone: <a href="tel:+919650507949">+919650507949</a></p>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2025 Textile Colour India. All rights reserved.
+  </footer>
+  <script>
+    (() => {
+      const colorSequenceSection = document.getElementById('color-sequence');
+      const buttons = document.querySelectorAll('.buttons-container button');
+
+      const colorData = {
+        direct: `
+          <div class="color-sequence-box" role="region" aria-label="Direct Dyes Color List">
+            <h2>Direct Dyes</h2>
+            <table class="color-list">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>DT01</td><td>DT BLACK E (GT)</td><td>345</td></tr>
+                <tr><td>DT02</td><td>DT BLACK E STD</td><td>245</td></tr>
+                <tr><td>DT03</td><td>DT BLUE 2B</td><td>265</td></tr>
+                <tr><td>DT04</td><td>DT BLUE GLL</td><td>545</td></tr>
+                <tr><td>DT05</td><td>DT BLUE GLL STD</td><td>455</td></tr>
+                <tr><td>DT06</td><td>DT BLUE MR</td><td>555</td></tr>
+                <tr><td>DT07</td><td>DT BORDEAUX CRD</td><td>275</td></tr>
+                <tr><td>DT08</td><td>DT BORDEAUX STD</td><td>175</td></tr>
+                <tr><td>DT09</td><td>DT BROWN GG</td><td>345</td></tr>
+                <tr><td>DT10</td><td>DT BROWN JJ</td><td>345</td></tr>
+                <tr><td>DT11</td><td>DT BROWN MR</td><td>445</td></tr>
+                <tr><td>DT12</td><td>DT BROWN MR STD</td><td>335</td></tr>
+                <tr><td>DT13</td><td>DT DARK BLUE</td><td>225</td></tr>
+                <tr><td>DT14</td><td>DT GREEN B CRD</td><td>355</td></tr>
+                <tr><td>DT15</td><td>DT GREEN B STD</td><td>275</td></tr>
+                <tr><td>DT16</td><td>DT GREY R CRD</td><td>255</td></tr>
+                <tr><td>DT17</td><td>DT KHAKI 671 CRD</td><td>225</td></tr>
+                <tr><td>DT18</td><td>DT NAVY BLUE(BT)</td><td>285</td></tr>
+                <tr><td>DT19</td><td>DT ORANGE BDC</td><td>285</td></tr>
+                <tr><td>DT20</td><td>DT ORANGE TGLL</td><td>315</td></tr>
+                <tr><td>DT21</td><td>DT PEACOCK BLUE</td><td>160</td></tr>
+                <tr><td>DT22</td><td>DT PHOOL PEELA</td><td>285</td></tr>
+                <tr><td>DT23</td><td>DT SCARLETT 4BS</td><td>610</td></tr>
+                <tr><td>DT24</td><td>DT SKY BLUE</td><td>285</td></tr>
+                <tr><td>DT25</td><td>DT SKY BLUE STD</td><td>215</td></tr>
+                <tr><td>DT26</td><td>DT TURQUOISE BLUE</td><td>275</td></tr>
+                <tr><td>DT27</td><td>DT TURQUOISE BLUE STD</td><td>235</td></tr>
+                <tr><td>DT28</td><td>DT YELLOW 5GLL</td><td>455</td></tr>
+                <tr><td>DT29</td><td>DT LIGHT FAST BLUE GLL</td><td>755</td></tr>
+                <tr><td>DT30</td><td>DT ECO BLUE GLL</td><td>355</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        reactive: `
+          <div class="color-sequence-box" role="region" aria-label="Reactive Dyes Color List">
+            <h2>Reactive Dyes</h2>
+            <table class="color-list">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>RE01</td><td>RE GOLDEN YELLOW HER</td><td>355</td></tr>
+                <tr><td>RE02</td><td>RE GREEN HE4BD</td><td>345</td></tr>
+                <tr><td>RE03</td><td>RE NAVY BLUE RX</td><td>555</td></tr>
+                <tr><td>RE04</td><td>RE ORANGE HE2R</td><td>355</td></tr>
+                <tr><td>RE05</td><td>RE RED 7B</td><td>325</td></tr>
+                <tr><td>RE06</td><td>RE RED 8B</td><td>325</td></tr>
+                <tr><td>RE07</td><td>RE YELLOW HE4G</td><td>355</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        sulphur: `
+          <div class="color-sequence-box" role="region" aria-label="Sulphur Dyes Color List">
+            <h2>Sulphur Dyes</h2>
+            <table class="color-list">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>SUL01</td><td>SUL DARK BLUE</td><td>820</td></tr>
+                <tr><td>SUL02</td><td>SUL NAVY BLUE</td><td>825</td></tr>
+                <tr><td>SUL03</td><td>SUL OCEAN BLUE</td><td>785</td></tr>
+                <tr><td>SUL04</td><td>SUL SUPER BLUE</td><td>775</td></tr>
+                <tr><td>SUL05</td><td>SUL PRIDE BLUE</td><td>755</td></tr>
+                <tr><td>SUL06</td><td>SUL TOPAZ BLUE</td><td>655</td></tr>
+                <tr><td>SUL07</td><td>SUL SEA BLUE</td><td>625</td></tr>
+                <tr><td>SUL08</td><td>SUL CARBON BLUE</td><td>600</td></tr>
+                <tr><td>SUL09</td><td>SUL HEAVEN BLUE</td><td>585</td></tr>
+                <tr><td>SUL10</td><td>SUL EMPIRE BLUE</td><td>555</td></tr>
+                <tr><td>SUL11</td><td>SUL BLUE POST</td><td>455</td></tr>
+                <tr><td>SUL12</td><td>SUL SUPREME BLUE</td><td>405</td></tr>
+                <tr><td>SUL13</td><td>SUL PASSION BLUE</td><td>355</td></tr>
+                <tr><td>SUL14</td><td>SUL NOVEL BLUE</td><td>355</td></tr>
+                <tr><td>SUL15</td><td>SUL PERFECT BLUE</td><td>255</td></tr>
+                <tr><td>SUL16</td><td>SUL BLACK DIAMOND</td><td>280</td></tr>
+                <tr><td>SULGT10</td><td>SUL BLACK GT10</td><td>220</td></tr>
+                <tr><td>SULGT55</td><td>SUL BLACK GT55</td><td>170</td></tr>
+                <tr><td>SUL17</td><td>SUL BLACK Z PLUS</td><td>240</td></tr>
+                <tr><td>SUL18</td><td>SUL BLACK SRD</td><td>230</td></tr>
+                <tr><td>SUL19</td><td>SUL BLACK CRD</td><td>210</td></tr>
+                <tr><td>SUL20</td><td>SUL MAROON CRD</td><td>830</td></tr>
+                <tr><td>SUL21</td><td>SUL MAROON BRIGHT</td><td>485</td></tr>
+                <tr><td>SUL22</td><td>SUL MAROON DELUXE</td><td>350</td></tr>
+                <tr><td>SUL23</td><td>SUL MAROON UNIQUE</td><td>285</td></tr>
+                <tr><td>SUL24</td><td>SUL DESERT CAMEL</td><td>300</td></tr>
+                <tr><td>SUL25</td><td>SUL SUPER CAMEL</td><td>250</td></tr>
+                <tr><td>SUL26</td><td>SUL POPULAR CAMEL</td><td>230</td></tr>
+                <tr><td>SUL27</td><td>SUL TAPE BROWN</td><td>390</td></tr>
+                <tr><td>SUL30</td><td>SUL BOLD BROWN</td><td>375</td></tr>
+                <tr><td>SUL29</td><td>SUL PRIME BROWN</td><td>375</td></tr>
+                <tr><td>SUL30</td><td>SUL TREND BROWN</td><td>275</td></tr>
+                <tr><td>SUL31</td><td>SUL HORSE BROWN</td><td>355</td></tr>
+                <tr><td>SUL32</td><td>SUL CANADA BROWN</td><td>345</td></tr>
+                <tr><td>SUL33</td><td>SUL ROYAL BROWN</td><td>345</td></tr>
+                <tr><td>SUL34</td><td>SUL DARK BROWN</td><td>335</td></tr>
+                <tr><td>SUL35</td><td>SUL BROWN CR</td><td>280</td></tr>
+                <tr><td>SUL36</td><td>SUL SAND BROWN</td><td>275</td></tr>
+                <tr><td>SUL37</td><td>SUL CAMEL BROWN</td><td>220</td></tr>
+                <tr><td>SUL38</td><td>SUL GREEN FF BRIGHT</td><td>490</td></tr>
+                <tr><td>SUL39</td><td>SUL SHARP GREEN</td><td>475</td></tr>
+                <tr><td>SUL40</td><td>SUL BOTTLE GREEN</td><td>425</td></tr>
+                <tr><td>SUL41</td><td>SUL ARMY GREEN</td><td>385</td></tr>
+                <tr><td>SUL42</td><td>SUL COMMANDO GREEN</td><td>375</td></tr>
+                <tr><td>SUL43</td><td>SUL OLIVE GREEN</td><td>345</td></tr>
+                <tr><td>SUL59</td><td>SUL GRASS KHAKI</td><td>325</td></tr>
+                <tr><td>SUL60</td><td>SUL STORM KHAKI</td><td>315</td></tr>
+                <tr><td>SUL61</td><td>SUL OFFICER KHAKI</td><td>305</td></tr>
+                <tr><td>SUL62</td><td>SUL PREMIUM KHAKI</td><td>275</td></tr>
+                <tr><td>SUL63</td><td>SUL REGULAR KHAKI</td><td>250</td></tr>
+                <tr><td>SUL64</td><td>SUL BRIGHT ORANGE</td><td>340</td></tr>
+                <tr><td>SUL65</td><td>SUL ORANGE DELUXE</td><td>185</td></tr>
+                <tr><td>SUL66</td><td>SUL PURPLE/MAGENTA</td><td>385</td></tr>
+                <tr><td>SUL67</td><td>SUL GREEN BLUE CV</td><td>830</td></tr>
+                <tr><td>SUL68</td><td>SUL PEACOCK BLUE</td><td>675</td></tr>
+                <tr><td>SUL69</td><td>SUL PEACOCK BRIGHT</td><td>415</td></tr>
+                <tr><td>SUL70</td><td>SUL PEACOCK DELUXE</td><td>375</td></tr>
+                <tr><td>SUL71</td><td>SUL BRIGHT RED</td><td>285</td></tr>
+                <tr><td>SUL72</td><td>SUL PRINCE RED</td><td>275</td></tr>
+                <tr><td>SUL73</td><td>SUL TOPAZ YELLOW</td><td>385</td></tr>
+                <tr><td>SUL74</td><td>SUL BRIGHT YELLOW</td><td>375</td></tr>
+                <tr><td>SUL75</td><td>SUL SUNSET YELLOW</td><td>335</td></tr>
+                <tr><td>SUL76</td><td>SUL DELUXE YELLOW</td><td>250</td></tr>
+                <tr><td>SUL77</td><td>SUL YELLOW BROWN 5G</td><td>350</td></tr>
+                <tr><td>SUL78</td><td>SUL GM100 MG</td><td>250</td></tr>
+                <tr><td>SUL79</td><td>SUL HYN04 CRD</td><td>250</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        auxiliaries: `
+           <div class="color-sequence-box" role="region" aria-label="Auxiliaries List">
+            <h2>Auxiliaries</h2>
+            <table class="color-list">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Name</th>
+                  <th>Price (₹)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>AUX01</td><td>2B-OBA POWDER</td><td>160</td></tr>
+                <tr><td>AUX02</td><td>4BB-OBA POWDER</td><td>285</td></tr>
+                <tr><td>AUX03</td><td>ABS FLAKES</td><td>330</td></tr>
+                <tr><td>AUX04</td><td>ABS POWDER CRD</td><td>220</td></tr>
+                <tr><td>AUX05</td><td>ADL LV900</td><td>100</td></tr>
+                <tr><td>AUX06</td><td>BIO BDX5</td><td>250</td></tr>
+                <tr><td>AUX07</td><td>BIO CDX5</td><td>600</td></tr>
+                <tr><td>AUX08</td><td>BRIGHTNER</td><td>175</td></tr>
+                <tr><td>AUX09</td><td>DESIZER HDX5</td><td>80</td></tr>
+                <tr><td>AUX10</td><td>DYEFIXER AFX5</td><td>145</td></tr>
+                <tr><td>AUX11</td><td>HARDNER AX5</td><td>90</td></tr>
+                <tr><td>AUX12</td><td>HI POWDER CRD</td><td>160</td></tr>
+                <tr><td>AUX13</td><td>LUBRICANT LT100</td><td>345</td></tr>
+                <tr><td>AUX14</td><td>M-VIOLET LIQ CRD</td><td>250</td></tr>
+                <tr><td>AUX15</td><td>M-VIOLET LIQ IIR</td><td>230</td></tr>
+                <tr><td>AUX16</td><td>N.I.D. 9022</td><td>65</td></tr>
+                <tr><td>AUX17</td><td>OT PASTE</td><td>140</td></tr>
+                <tr><td>AUX18</td><td>SILICONE TM05</td><td>240</td></tr>
+                <tr><td>AUX19</td><td>SOFTNER MX5</td><td>45</td></tr>
+                <tr><td>AUX20</td><td>S POWDER</td><td>160</td></tr>
+                <tr><td>AUX21</td><td>SI LIQUID</td><td>150</td></tr>
+                <tr><td>AUX22</td><td>WATER SOFT-AGX5</td><td>130</td></tr>
+                <tr><td>AUX23</td><td>H.GLOVES 18",20",22"</td><td>215,240,265</td></tr>
+                <tr><td>AUX24</td><td>THERMOCOL S,J</td><td>460,600</td></tr>
+                <tr><td>AUX25</td><td>THERMOCOL BALL 38mm</td><td>620</td></tr>
+                <tr><td>AUX26</td><td>THERMOCOL CUBE 1"</td><td>210</td></tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+      };
+
+      // Add default active style to the buttons
+      const styleElement = document.createElement('style');
+      styleElement.textContent = `
+        .buttons-container button.active {
+          background-color: #00509e;
+          color: white;
+          box-shadow: 0 4px 12px rgb(0 80 158 / 0.4);
+        }
+      `;
+      document.head.appendChild(styleElement);
+
+      function clearActiveButtons() {
+        buttons.forEach(btn => btn.classList.remove('active'));
+      }
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const dyeType = button.getAttribute('data-dye');
+          clearActiveButtons();
+          button.classList.add('active');
+          const content = colorData[dyeType] || '';
+          colorSequenceSection.innerHTML = content;
+        });
+      });
+
+      // Display Direct Dyes by default on page load
+      const defaultButton = document.querySelector('[data-dye="direct"]');
+      if (defaultButton) {
+        defaultButton.click();
+      }
+    })();
+  </script>
+</body>
+</html>
